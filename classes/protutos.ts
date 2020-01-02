@@ -21,5 +21,6 @@ class Produto {
 
 const produtos = new Produto('Anderson',4.20, .05);
 const produtos2 = new Produto('Anderson',100);
+
 console.log(produtos.resumo());
 console.log(produtos2.resumo());

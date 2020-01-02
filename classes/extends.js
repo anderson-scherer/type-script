@@ -1,5 +1,5 @@
 "use strict";
-class Carro {
+class Carro1 {
     constructor(marca, modelo, velociaddeMaxima = 200) {
         this.marca = marca;
         this.modelo = modelo;
@@ -24,12 +24,18 @@ class Carro {
         return this.alterarVelocidade(-5);
     }
 }
-const carro1 = new Carro('Ford', 'Focus', 185);
-Array(50).fill(0).forEach(() => {
-    carro1.acelerar();
-});
-Array(30).fill(0).forEach(() => {
-    carro1.frear();
-});
-console.log(carro1);
-//# sourceMappingURL=carro.js.map
+class Ferrari extends Carro1 {
+    constructor(modelo, velocidadeMaxima) {
+        super('Ferrari', modelo, velocidadeMaxima);
+    }
+    acelerar() {
+        return this.alterarVelocidade(20);
+    }
+    frear() {
+        return this.alterarVelocidade(-15);
+    }
+}
+const f40 = new Ferrari('f40', 324);
+console.log(f40.acelerar());
+console.log(f40);
+//# sourceMappingURL=extends.js.map
