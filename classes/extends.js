@@ -35,6 +35,8 @@ class Ferrari extends Carro1 {
         return this.alterarVelocidade(-15);
     }
 }
+const carrinho = new Carro1('vw', 'fusca', 6);
+console.log(carrinho);
 const f40 = new Ferrari('f40', 324);
 console.log(f40.acelerar());
 console.log(f40);
