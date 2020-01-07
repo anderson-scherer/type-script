@@ -1,7 +1,7 @@
 "use strict";
 class Matematica {
     static areaCirc(raio) {
-        return this.PI * raio * raio;
+        return Matematica.PI * raio * raio;
     }
 }
 Matematica.PI = 3.1416;

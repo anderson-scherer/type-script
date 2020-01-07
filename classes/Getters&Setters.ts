@@ -27,6 +27,6 @@ class PessoaGet {
     }
 }
 
-const pessoaClassGet = new PessoaGet()
+const pessoaClassGet = new PessoaGet();
 pessoaClassGet.idade = 10;
 console.log(pessoaClassGet.idade);
