@@ -26,4 +26,64 @@ saudarComoOla(pessoa);
 mudaNome(pessoa);
 saudarComoOla(pessoa)
 // saudarComoOla({ nome: 'teste', idade: 10, altura: 1.75 });
-pessoa.saudar('Skywlaker')
+pessoa.saudar('Skywlaker');
+
+class CLientes implements Humano {
+    nome: string = '';
+    ultimaCompra: Date = new Date();
+
+    saudar(sobrenome: string) {
+        console.log(`Olá ${this.nome} ${sobrenome}`);
+    }
+}
+
+const meuCliente = new CLientes();
+meuCliente.nome = 'Han';
+saudarComoOla(meuCliente);
+meuCliente.saudar('Solo');
+console.log(meuCliente.ultimaCompra);
+
+// Interface Função
+interface FuncaoCalculo {
+    (a: number, b:number): number;
+}
+
+let potencia: FuncaoCalculo;
+
+potencia = function(base: number, exp: number): number {
+    // Math.pow(base,exp)
+    // base ** exp
+    return Array(exp).fill(base).reduce((t, a ) => t * a);
+}
+
+console.log(potencia(2, 3));
+
+// Herança 
+interface A {
+    a(): void
+}
+
+interface B {
+    b(): void
+}
+
+interface ABC extends A, B {
+    c(): void
+}
+
+class RealAB implements A, B {
+    a(): void {}
+    b(): void {}
+}
+
+class RealABC implements ABC {
+    a(): void {}
+    b(): void {}
+    c(): void {}
+}
+
+abstract class AbstractABD implements A, B {
+    a(): void {}
+    b(): void {}
+    abstract d(): void    
+}
