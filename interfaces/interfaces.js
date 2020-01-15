@@ -38,4 +38,35 @@ potencia = function (base, exp) {
     return Array(exp).fill(base).reduce((t, a) => t * a);
 };
 console.log(potencia(2, 3));
+class RealAB {
+    a() { }
+    b() { }
+}
+class RealABC {
+    a() { }
+    b() { }
+    c() { }
+}
+class AbstractABD {
+    a() { }
+    b() { }
+}
+Object.prototype.log = function () {
+    console.log(this.toString());
+};
+Object.prototype.warn = function () {
+    console.warn(this.toString());
+};
+const x = 2;
+const y = 3;
+const z = 4;
+x.log();
+z.log();
+z.log();
+const cli = {
+    nome: 'Pedro',
+    toString() { return this.nome; }
+};
+cli.log();
+cli.warn();
 //# sourceMappingURL=interfaces.js.map
